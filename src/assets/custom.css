@@ -1,0 +1,69 @@
+.accordion-item:first-of-type {
+    border-top-left-radius: var(--bs-accordion-border-radius);
+    border-top-right-radius: var(--bs-accordion-border-radius);
+}
+
+.order-history-row {
+    border: 1px solid #eeeff2!important;
+    border-radius: 16px!important;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.accordion-item {
+    background: 0 0;
+    border: none;
+}
+
+.accordion-item {
+    background-color: var(--bs-accordion-bg);
+    border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+    color: var(--bs-accordion-color);
+}
+
+.dark .order-history-row {
+    border-color: #323b49!important;
+}
+.order-history .accordion-header {
+    width: 100%;
+}
+
+@media screen and (min-width: 1200px)
+{
+    .order-history-row-inner.order-history-row-inner--order-item {
+        padding: 0;
+    }
+}
+
+.order-history-row-inner {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 16px;
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .accordion-animation {
+    animation: 0.5s ease-out 0s 1 slideInFromRight;
+  }  
+
+  .slide-enter {
+    transform: translateX(100%);
+  }
+  .slide-enter-active {
+    transform: translateX(0);
+    transition: transform 500ms ease-in-out;
+  }
+  .slide-exit-active {
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out; /* thay đổi thời gian tương tự */
+  }
